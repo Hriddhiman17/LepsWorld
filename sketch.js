@@ -13,16 +13,18 @@ function setup() {
 function draw() {
   background(255);
 
-  if(keyDown('space') && player.velocityY === 0){
-    player.velocityY = player.velocityY-25
+  if (keyDown('space') && player.velocityY === 0) {
+    player.velocityY = player.velocityY - 25;
   }
-  if(keyDown('left')){
-    player.x = player.x-10
+  if (keyDown('left')) {
+    player.x = player.x - 10;
   }
-  if(keyDown('right')){
-    player.x = player.x+10
+  if (keyDown('right')) {
+    player.x = player.x + 10;
   }
-  player.velocityY = player.velocityY + 1
+  player.velocityY = player.velocityY + 1;
+  
   drawSprites();
+
   player.collide(ground);
 }
